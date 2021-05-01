@@ -1,0 +1,16 @@
+Sensor de combustible TD- BLE
+
+Calcular crc: https://crccalc.com/ - CRC-8/MAXIM
+
+Comando a enviar: do 31 01 06 6C HEX 19200 baud
+01 dirección
+
+Respuesta
+3E - prefijo de respuesta
+01 - adres de red
+06 - comando de solicitud
+12 - temperatura en HEX
+0F00 - nivel actual (se lee al revés 000F, o sea se cambian de lugar byte mayor y menor)
+0000 - datos de servicio
+AF - CRC (suma de control)
+
